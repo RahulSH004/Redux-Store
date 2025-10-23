@@ -4,12 +4,20 @@ import ProductCard from './ProductCard'
 // import { useNavigate } from 'react-router-dom'
 import {useDispatch} from 'react-redux'
 import { addToCart } from '../store/cartitemstate'
+import { useEffect } from 'react'
 
 
 
 const Store = () => {
   // const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, []);
 
   const products = [
     {
